@@ -1,0 +1,78 @@
+<% layout('layout/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Recipe!</h1>
+    <div class="col-6 offset-3">
+        <form action="/recipes" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label class="form-label" for="title">Recipe Name</label>
+                <input class="form-control" type="text" name="title" id="title" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="origin">Recipe Origin</label>
+                <input class="form-control" type="text" name="origin" id="origin" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">Image URL</label>
+                <input class="form-control" type="text" name="image" id="image" required>
+            </div>
+
+            <div class="mb-3">
+                <h4>Select Dish Type</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="breakfast" id="dishType" name="dishType" required>
+                    <label class="form-check-label" for="breakfast">
+                        breakfast
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="entree" id="dishType" name="dishType" required>
+                    <label class="form-check-label" for="entree">
+                        Entree
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="snack" id="dishType" name="dishType">
+                    <label class="form-check-label" for="snack">
+                        snack
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="soup" id="dishType" name="dishType">
+                    <label class="form-check-label" for="soup">
+                        soup
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="drink" id="dishType" name="dishType">
+                    <label class="form-check-label" for="drink">
+                        drink
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" value="dessert" id="dishType" name="dishType">
+                    <label class="form-check-label" for="dessert">
+                        dessert
+                    </label>
+                </div>
+            </div>
+            <% for(let i=0; i < num; i++){ %>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="ingredient name" id="ingredients" name="ingredients[name]"
+                    aria-label="ingredient name" required>
+                <input type="text" class="form-control" placeholder="amount" id="ingredients" name="ingredients[amount]"
+                    aria-label="amount" required>
+                <input type="text" class="form-control" placeholder="unit" id="ingredients" name="ingredients[unit]" aria-label="unit" required>
+            </div>
+            <% } %>
+
+
+
+            <div class="mb-3">
+                <button class="btn btn-success">Add recipes</button>
+            </div>
+        </form>
+    </div>
+
+    <a href="/recipes">Back to recipes</a>
+</div>
+</div>

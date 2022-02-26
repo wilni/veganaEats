@@ -1,0 +1,32 @@
+body {
+    background: radial-gradient(circle, #dda15e 0%, #fefae0 43%, #dda15e 100%);
+    /* text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5); */
+    /* box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5); */
+}
+
+.cardBtn {
+    color: #6c757d;
+    text-shadow: none;
+    border: 1px solid #6c757d;
+    outline: none;
+    box-shadow: 1px 3px;
+    position: relative;
+
+}
+
+.cardBtn:hover {
+    box-shadow: 0px 2px;
+    top: 1px;
+    cursor: pointer;
+}
+
+.cardBtn:active {
+    box-shadow: 0px 0px;
+    top: 2px;
+}
+
+.recipeCard {
+    background-color: #606c3880;
+    font-weight: 20px;
+}
+
